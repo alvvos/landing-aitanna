@@ -1,7 +1,9 @@
 const Blog = () => {
   return (
-    <div className="pt-32 px-6 max-w-7xl mx-auto min-h-screen mb-20">
-      <h1 className="text-4xl font-bold text-white mb-8">Últimas Noticias</h1>
+    <div className="pt-32 px-6 max-w-7xl mx-auto py-20">
+      <h1 className="text-4xl font-bold text-white mb-8 md:mb-20">
+        Últimas Noticias
+      </h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[1, 2, 3].map((post) => (
           <article

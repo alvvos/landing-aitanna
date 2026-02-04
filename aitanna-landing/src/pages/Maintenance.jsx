@@ -30,16 +30,6 @@ const Maintenance = () => {
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a
-            href="https://plataforma.aitanna.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-aitanna-teal hover:bg-aitanna-glow text-white px-8 py-3 rounded-full flex items-center gap-2 transition-all shadow-lg shadow-aitanna-teal/20 font-semibold"
-          >
-            <Monitor size={20} />
-            Ir a la Plataforma
-          </a>
-
-          <a
             href="mailto:info@aitanna.ai"
             className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors px-6 py-3 border border-slate-700 rounded-full hover:border-aitanna-teal"
           >
