@@ -1,6 +1,6 @@
 const Reel = () => {
   return (
-    <div className="pt-32 px-6 max-w-7xl mx-auto min-h-screen mb-20">
+    <div className="pb-20 pt-48 lg:pt-64 px-6 max-w-7xl mx-auto min-h-screen mb-20">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-white mb-4">
           Aitanna en movimiento

@@ -1,6 +1,6 @@
 const Blog = () => {
   return (
-    <div className="pt-32 px-6 max-w-7xl mx-auto py-20">
+    <div className="px-6 max-w-7xl mx-auto pb-20 pt-48 lg:pt-64 flex flex-col items-center">
       <h1 className="text-4xl font-bold text-white mb-8 md:mb-20">
         Últimas Noticias
       </h1>

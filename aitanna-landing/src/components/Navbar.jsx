@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Monitor, Menu, X } from "lucide-react";
+import { Monitor, Menu, X, Toolbox, ToolCase } from "lucide-react";
 import { useEffect, useState } from "react";
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled && !isOpen
-            ? "bg-aitanna-dark/90 backdrop-blur-md py-4 shadow-lg border-b border-white/5"
+            ? "bg-aitanna-dark/90 backdrop-blur-md py-4 shadow-lg"
             : "bg-transparent py-6"
         }`}
       >
@@ -38,7 +39,8 @@ const Navbar = () => {
               onClick={closeMenu}
               className="text-2xl font-bold tracking-tighter text-white font-display"
             >
-              AITANNA<span className="text-aitanna-glow">.</span>
+              <img src="/header-logo.png" alt="Logo Aitanna" className="w-24 md:w-32 lg:w-40 xl:w-48" />
+
             </Link>
           </div>
 
@@ -69,7 +71,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="hidden md:flex flex-1 justify-end">
+          <div className="hidden md:flex flex-1 justify-end space-x-4">
             <a
               href="https://plataforma.aitanna.com"
               target="_blank"
@@ -81,6 +83,18 @@ const Navbar = () => {
                 className="group-hover:rotate-12 transition-transform"
               />
               <span className="font-semibold text-sm">Plataforma</span>
+            </a>
+            <a
+              href="https://plataforma.aitanna.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 bg-aitanna-dark hover:bg-aitanna-glow text-white px-5 py-2 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(128,128,128,0.5)] hover:shadow-[0_0_25px_rgba(128,128,128,0.6)]"
+            >
+              <ToolCase
+                size={18}
+                className="group-hover:rotate-12 transition-transform"
+              />
+              <span className="font-semibold text-sm">Instalador</span>
             </a>
           </div>
 
@@ -138,6 +152,16 @@ const Navbar = () => {
         >
           <Monitor size={24} />
           Plataforma
+        </a>
+          
+        <a
+          href="https://plataforma.aitanna.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-aitanna-dark text-white px-8 py-3 rounded-full flex items-center gap-2 font-bold text-lg shadow-lg shadow-[rgba(128,128,128,0.3)] active:scale-95 transition-transform"
+        >
+          <ToolCase size={24} />
+          Instalador
         </a>
       </div>
     </>
