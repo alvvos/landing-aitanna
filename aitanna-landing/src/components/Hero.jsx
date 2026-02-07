@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
+import { useLanguageStore } from "../store/useLanguajeStore";
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
+  const { t } = useLanguageStore();
 
   useEffect(() => {
     const handleScroll = () => setOffset(window.pageYOffset);
@@ -25,15 +27,13 @@ const Hero = () => {
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
         <h1 className="text-4xl md:text-6xl leading-snug font-bold text-white mb-6 drop-shadow-2xl">
-          Espacios físicos <br />
+          {t("hero.title")} <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-aitanna-teal to-aitanna-glow">
-            medibles, vivos y accionables
+            {t("hero.subtitle")}
           </span>
         </h1>
         <p className="text-lg md:text-2xl text-slate-200 mb-8 font-light max-w-3xl mx-auto leading-relaxed">
-          Aitanna.ai es una plataforma de analítica avanzada y gestión de datos
-          en tiempo real diseñada para entender cómo se mueven las personas en
-          espacios físicos complejos.
+          {t("hero.desc")}
         </p>
       </div>
 
